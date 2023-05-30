@@ -1,0 +1,17 @@
+server:
+  port: ${application.port:8005}  #生效的端口就是8004
+  servlet:
+    context-path: /a
+  undertow:
+    threads:
+      io: 4  #默认就是CPU核数,不要设置过大
+      worker: 32 #默认就是I/O线程数 * 8
+    buffer-size: 1024
+    direct-buffers: true #是否分配直接内存（堆外内存)
+
+    accesslog:
+      enabled: true
+
+
+application:
+  port: 8004
