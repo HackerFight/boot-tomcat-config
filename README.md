@@ -16,5 +16,7 @@
 ### 1.2 APR模式启动tomcat
 在tomcat8之后默认是以NIO的模式启动的，如果想以APR模式启动，请[参考文档](https://www.cnblogs.com/yueli/p/9668088.html)
 
+### 1.3 springboot web starter 默认依赖tomcat
+![tomcat](tomcat/src/main/resources/spring-boot-starter-web-tomcat.png)
 
 ## 2.jetty 启动
