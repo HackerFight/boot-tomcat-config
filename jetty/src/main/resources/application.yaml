@@ -1,0 +1,10 @@
+
+server:
+  port: 8002  #配置文件优先级比配置类编码优先级更高
+  servlet:
+    context-path: /web2  #配置文件优先级比配置类编码优先级更高
+  jetty:
+    threads:
+      min: 5
+      max: 20
+      max-queue-capacity: 100  #默认值是： Math.max(_minThreads, 8) * 1024

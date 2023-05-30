@@ -20,3 +20,10 @@
 ![tomcat](tomcat/src/main/resources/spring-boot-starter-web-tomcat.png)
 
 ## 2.jetty 启动
+### 2.1 jetty 与 tomcat的区别
+[参考文档1](https://zhuanlan.zhihu.com/p/341599686) <br>
+[参考文档2](https://juejin.cn/post/7208582202011467834)
+<br>
+二者差异不大， 只是适用场景略有不同
+1. 相比tomcat, jetty 更轻量级，更容易拓展。
+2. Jetty支持处理大量连接和长连接，顾更适用于web聊天室，即时通信等场景方面
