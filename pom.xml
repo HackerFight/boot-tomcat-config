@@ -12,6 +12,7 @@
         <module>tomcat</module>
         <module>jetty</module>
         <module>undertow</module>
+        <module>netty</module>
     </modules>
 
     <properties>

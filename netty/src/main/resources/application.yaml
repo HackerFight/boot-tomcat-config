@@ -1,0 +1,12 @@
+server:
+  port: 8009
+
+
+#日志台打印更详细更多的日志
+#logging:
+#  level:
+#    root: DEBUG
+
+spring:
+  jmx:
+    enabled: false
