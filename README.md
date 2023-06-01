@@ -88,4 +88,33 @@
 当我使用undertow测试时就没有失败的，全部都处理成功。
 
 
+## 4.netty
+springboot 启动时会根据``WebApplicationType`` 创建3种类型的容器
+```java
+public enum WebApplicationType {
 
+    /**
+     * 非web环境
+     */
+    NONE,
+
+    /**
+     * tomcat/jetty/undertow
+     */
+    SERVLET,
+
+    /**
+     * netty
+     */
+    REACTIVE;
+}    
+```
+现在我们需要以netty作为容器启动，则类型应该 ``WebApplicationType#REACTIVE``, 而在<b>SpringApplication</b>类的构造器中
+它会根据完整类路径来构建不同的容器。
+1. SERVLET:  org.springframework.web.servlet.DispatcherServlet
+2. REACTIVE:  org.springframework.web.reactive.DispatcherHandler
+
+其中 ``DispatcherHandler`` 类是在 spring-boot-starter-webflux 依赖中，所以如果使用netty作为容器启动 可以导入这个依赖。
+<br>
+
+或者可以尝试自己构建netty容器启动？
